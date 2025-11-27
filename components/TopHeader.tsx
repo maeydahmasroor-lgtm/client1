@@ -1,18 +1,19 @@
-import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+// components/MarqueeComponent.tsx
+"use client"
+import React from 'react';
+import Marquee from 'react-fast-marquee';
 
-const TopHeader = () => {
+const MarqueeComponent: React.FC = () => {
   return (
-    <div className="bg-gray-800 text-white p-2">
-      <div className="container mx-auto flex justify-between items-center">
-        <p className="text-sm">Contact: info@sjacademy.pk</p>
-        <div className="flex gap-4">
-          <a href="#" className="text-white hover:text-gray-300"><FaFacebook /></a>
-          <a href="#" className="text-white hover:text-gray-300"><FaTwitter /></a>
-          <a href="#" className="text-white hover:text-gray-300"><FaLinkedin /></a>
-        </div>
+    <Marquee speed={50} gradient={false} className="bg-gray-100 py-4 overflow-hidden h-10">
+      <div className="flex space-x-12 whitespace-nowrap">
+        <span className="text-xl font-semibold text-blue-600">Your Marquee Item 1</span>
+        <span className="text-xl font-semibold text-green-600">Your Marquee Item 2</span>
+        <span className="text-xl font-semibold text-red-600">Your Marquee Item 3</span>
+        {/* Add more items here */}
       </div>
-    </div>
+    </Marquee>
   );
 };
 
-export default TopHeader;
+export default MarqueeComponent;
