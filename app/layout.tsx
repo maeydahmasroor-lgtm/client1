@@ -31,7 +31,9 @@ export default function RootLayout({
         
         <Marquee1/>
         <Navbar1/>
+        <main>
         {children}
+        </main>
       </body>
     </html>
   );

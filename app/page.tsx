@@ -5,6 +5,7 @@ import Courses from "@/components/Courses";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testinomial";
 import FAQ from "@/components/FAQ";
+import InstructorList from "@/components/Instructors";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Courses />
       <About />
+      <InstructorList/>
       <Features />
       <Testimonials/>
       <FAQ/>

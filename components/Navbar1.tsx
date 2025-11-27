@@ -97,7 +97,7 @@ export default function Navbar() {
             {openSubmenu === "resources" && (
               <ul className="absolute top-full left-0 bg-white shadow-md mt-2 rounded w-40">
                 <li className="px-4 py-2 hover:bg-gray-100">
-                  <Link href="/Registration">Registration</Link>
+                  <Link href="/Register">Registration</Link>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100">
                   <Link href="/PastPaper">Past Papers</Link>
