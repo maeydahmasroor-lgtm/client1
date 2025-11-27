@@ -6,7 +6,7 @@ export default function WhatsAppForm() {
   const [message, setMessage] = useState("");
 
   const sendToWhatsApp = () => {
-    const phone = "923001234567";
+    const phone = "923197134823";
     let normalized = phone.replace(/\D/g, "");
 
     // If starts with 0, replace with country code (example Pakistan)
