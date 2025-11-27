@@ -63,36 +63,34 @@ export default function WhatsAppRegistrationForm() {
   const [session, setSession] = useState("morning"); // default session
   const [registrationFee, setRegistrationFee] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("online"); // default payment
-
-  const handleSend = () => {
-    // Normalize phone numbers
+  const sendToWhatsApp = () => {
     const phone = "923197134823";
     let normalized = phone.replace(/\D/g, "");
 
     // If starts with 0, replace with country code (example Pakistan)
     if (normalized.startsWith("0")) normalized = "92" + normalized.slice(1);
-
-
-
-    // Compose WhatsApp message
-    const message = `
-*Registration Form Submission*
-First Name: ${firstName}
-Last Name: ${lastName}
-Email: ${email}
-WhatsApp Number: ${whatsapp}
-Parent Phone Number: ${parentPhone}
-School/Organization: ${school || organization}
-Program Applied For: ${program}
-Session: ${session}
-Registration Fee: ${registrationFee}
-Payment Method: ${paymentMethod}
+  const message = `
+  *Registration Form Submission*
+  First Name: ${firstName}
+  Last Name: ${lastName}
+  Email: ${email}
+  WhatsApp Number: ${whatsapp}
+  Parent Phone Number: ${parentPhone}
+  School/Organization: ${school || organization}
+  Program Applied For: ${program}
+  Session: ${session}
+  Registration Fee: ${registrationFee}
+  Payment Method: ${paymentMethod}
     `;
 
     const encoded = encodeURIComponent(message);
-    const url = `https://wa.me/${phone}?text=${encoded}`;
+
+    const url = `https://wa.me/${normalized}?text=${encoded}`;
+
     window.open(url, "_blank");
-  };
+
+  
+    };
 
   return (
     <div className="max-w-xl mx-auto p-4 space-y-4 border rounded shadow mt-60">
@@ -220,7 +218,7 @@ Payment Method: ${paymentMethod}
       </div>
 
       <button
-        onClick={handleSend}
+        onClick={sendToWhatsApp}
         className="bg-green-600 text-white px-4 py-2 rounded w-full"
       >
         Send via WhatsApp
