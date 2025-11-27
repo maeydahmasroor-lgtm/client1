@@ -66,12 +66,13 @@ export default function WhatsAppRegistrationForm() {
 
   const handleSend = () => {
     // Normalize phone numbers
-    const normalizePhone = (num: string) => {
-      const digits = num.replace(/\D/g, "");
-      return digits.startsWith("0") ? "92" + digits.slice(1) : digits;
-    };
+    const phone = "923197134823";
+    let normalized = phone.replace(/\D/g, "");
 
-    const phoneNumber = normalizePhone(whatsapp);
+    // If starts with 0, replace with country code (example Pakistan)
+    if (normalized.startsWith("0")) normalized = "92" + normalized.slice(1);
+
+
 
     // Compose WhatsApp message
     const message = `
@@ -89,7 +90,7 @@ Payment Method: ${paymentMethod}
     `;
 
     const encoded = encodeURIComponent(message);
-    const url = `https://wa.me/${phoneNumber}?text=${encoded}`;
+    const url = `https://wa.me/${phone}?text=${encoded}`;
     window.open(url, "_blank");
   };
 
