@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar1 from "@/components/Navbar1"
-import Topheader from "@/components/TopHeader";
+import Marquee1 from "@/components/Marquee1";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         
-        <Topheader/>
+        <Marquee1/>
         <Navbar1/>
         {children}
       </body>

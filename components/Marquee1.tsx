@@ -1,10 +1,10 @@
 import Marquee from "react-fast-marquee";
 
-export function CustomMarquee() {
+export default function CustomMarquee() {
   return (
-    <div className="py-4" style={{backgroundColor:"#101b72"}}>
+    <div className="text-white py-4" style={{backgroundColor:"#101b72"}}>
       <Marquee gradient={false} speed={50}>
-        <div className="flex space-x-12 text-lg font-medium text-gray-800">
+        <div className="flex space-x-12 text-lg font-medium text-white">
           <span>Your Text 1 Here</span>
           <span>Your Text 2 Here</span>
           <span>Your Text 3 Here</span>
