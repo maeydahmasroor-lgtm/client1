@@ -95,8 +95,7 @@ export default function WhatsAppRegistrationForm() {
   return (
     <div className="max-w-xl mx-auto p-4 space-y-4 border rounded shadow mt-60">
       <h2 className="text-xl font-bold">Registration Form</h2>
-
-      <div className="flex gap-2">
+<div className="flex flex-col md:flex-row gap-4">
         <input
           type="text"
           placeholder="First Name"
