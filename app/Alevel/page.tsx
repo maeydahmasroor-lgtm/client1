@@ -1,3 +1,9 @@
-export default function Alevels(){
-    return <div>xxx</div>
+import Courses from "@/components/Courses";
+
+export default function Page() {
+  return (
+    <>
+      <Courses />
+    </>
+  );
 }
