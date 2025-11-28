@@ -61,7 +61,7 @@ export default function Hero() {
         </div>
 
         {/* RIGHT MAIN DIV (Images) */}
-        <div className="lg:col-span-6 hidden lg:grid grid-cols-2 gap-4">
+        {/*<div className="lg:col-span-6 hidden lg:grid grid-cols-2 gap-4">
           <div className="w-full h-48 relative">
             <Image src="/file.jpg" alt="Image 1" fill className="object-cover rounded" />
           </div>
@@ -75,8 +75,101 @@ export default function Hero() {
             <Image src="/file.jpg" alt="Image 4" fill className="object-cover rounded" />
           </div>
         </div>
+        */}
+        <div className="lg:col-span-6 hidden lg:flex flex-col gap-4">
 
-      </div>
-    </section>
+  {/* --- Top Two Rectangle Photos (new) --- */}
+  {/* --- Bottom Four Photos (your existing ones, modified) --- */}
+  {/*<div className="grid grid-cols-2 gap-4">
+    <div className="w-full h-48 relative overflow-hidden -ml-6 rounded">
+      <Image src="/file.jpg" alt="Image 1" fill className="object-cover" />
+    </div>
+
+    <div className="w-full h-48 relative">
+      <Image src="/file.jpg" alt="Image 2" fill className="object-cover rounded" />
+    </div>
+
+    <div className="w-full h-48 relative">
+      <Image src="/file.jpg" alt="Image 3" fill className="object-cover rounded" />
+    </div>
+
+    <div className="w-full h-48 relative overflow-hidden -mr-6 rounded">
+      <Image src="/file.jpg" alt="Image 4" fill className="object-cover" />
+    </div>
+  </div>*/}
+ 
+    {/*<div className="relative lg:col-span-6 hidden lg:block">
+
+  <div className="absolute top-0 left-0 right-0 flex justify-between px-4 -mt-6 z-20">
+    <div className="h-20 w-[100px] relative overflow-hidden -ml-4 rounded shadow-lg">
+      <Image src="/file.jpg" alt="Extra 1" fill className="object-cover" />
+    </div>
+
+    <div className="h-20 w-[100px] relative overflow-hidden -mb-4 -mr-4 rounded shadow-lg">
+      <Image src="/file.jpg" alt="Extra 2" fill className="object-cover" />
+    </div>
+  </div>
+
+  <div className="grid grid-cols-2 gap-4 mt-10">
+
+    <div className="w-full h-48 relative overflow-hidden -ml-6 rounded">
+      <Image src="/file.jpg" alt="Image 1" fill className="object-cover" />
+    </div>
+
+    <div className="w-full h-48 relative">
+      <Image src="/file.jpg" alt="Image 2" fill className="object-cover rounded" />
+    </div>
+
+    <div className="w-full h-48 relative">
+      <Image src="/file.jpg" alt="Image 3" fill className="object-cover rounded" />
+    </div>
+
+    <div className="w-full h-48 relative overflow-hidden -mr-6 rounded">
+      <Image src="/file.jpg" alt="Image 4" fill className="object-cover" />
+    </div>
+
+  </div>
+</div>
+</div>
+</div>*/}
+<div className="lg:col-span-6 hidden lg:block relative">
+
+  {/* --- External Left + Right Cutting Divs (h-10, w-50px) --- */}
+  <div className="absolute top-6 left-0 -ml-4 z-30 h-20 w-[200px] overflow-hidden rounded shadow-lg">
+    <Image src="/file.jpg" alt="Cut Left" fill className="object-cover" />
+  </div>
+
+  <div className="absolute bottom-6 right-0 -mr-4 z-30 h-20 w-[200px] overflow-hidden rounded shadow-lg">
+    <Image src="/file.jpg" alt="Cut Right" fill className="object-cover" />
+  </div>
+
+  {/* --- Main 4-image Grid --- */}
+  <div className="grid grid-cols-2 gap-4 mt-10">
+
+    {/* First image (cut slightly on left) */}
+    <div className="w-full h-48 relative overflow-hidden -ml-6 rounded">
+      <Image src="/file.jpg" alt="Image 1" fill className="object-cover" />
+    </div>
+
+    {/* Normal */}
+    <div className="w-full h-48 relative">
+      <Image src="/file.jpg" alt="Image 2" fill className="object-cover rounded" />
+    </div>
+
+    {/* Normal */}
+    <div className="w-full h-48 relative">
+      <Image src="/file.jpg" alt="Image 3" fill className="object-cover rounded" />
+    </div>
+
+    {/* Last image (cut slightly on right) */}
+    <div className="w-full h-48 relative overflow-hidden -mr-6 rounded">
+      <Image src="/file.jpg" alt="Image 4" fill className="object-cover" />
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</section>
   );
 }
