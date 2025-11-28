@@ -154,6 +154,26 @@ export default function Navbar() {
                 </ul>
               )}
             </li>
+            <li className="relative">
+            <button onClick={() => toggleSubmenu("resources")}>
+              Resources
+            </button>
+            {/* Submenu */}
+            {openSubmenu === "resources" && (
+              <ul className="absolute top-full left-0 bg-white shadow-md mt-2 rounded w-40">
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/Register">Registration</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/PastPaper">Past Papers</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/ALevelssubject">A Levels Subject Combination</Link>
+                </li>
+              </ul>
+            )}
+          </li>
+          
             <li><Link href="/" onClick={() => setOpen(false)}>Home</Link></li>
             <li><Link href="/services" onClick={() => setOpen(false)}>Resources</Link></li>
             <li><Link href="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
